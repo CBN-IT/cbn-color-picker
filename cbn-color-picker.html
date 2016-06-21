@@ -82,20 +82,21 @@ Custom property | Description | Default
 				@apply(--polymer-color-picker-icon);
 			}
 		</style>
-			<paper-menu-button id="paperMenu">
-				<paper-icon-button
-						toggles
-						id="iconButton"
-						icon="editor:format-color-fill"
-						class="dropdown-trigger" alt="color picker"
-						noink="[[noink]]">
-				</paper-icon-button>
-				<div class="dropdown-content box" on-tap="_onTap" id="box">
-					<template is="dom-repeat" items="{{colorList}}">
-						<div class="color">{{item}}</div>
-					</template>
-				</div>
-			</paper-menu-button>
+
+		<paper-menu-button id="paperMenu">
+			<paper-icon-button
+					toggles
+					id="iconButton"
+					icon="editor:format-color-fill"
+					class="dropdown-trigger" alt="color picker"
+					noink="[[noink]]">
+			</paper-icon-button>
+			<div class="dropdown-content box" on-tap="_onTap" id="box">
+				<template is="dom-repeat" items="{{colorList}}">
+					<div class="color">{{item}}</div>
+				</template>
+			</div>
+		</paper-menu-button>
 
 	</template>
 
