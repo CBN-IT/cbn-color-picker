@@ -153,16 +153,17 @@ Custom property | Description | Default
 			},
 
 			attached: function() {
-				var colorBoxes = this.$.box.querySelectorAll('.color');
-				for (var i = 0; i < colorBoxes.length; i++) {
-					colorBoxes[i].style.backgroundColor = colorBoxes[i].innerHTML;
-				}
 
 				// Fit the color boxes in columns. We first need to get the width of
 				// a color box (which is customizable), and then change the box's
 				// width to fit all the columns. This is a bit gross.
 
 				this.async(function(){
+					var colorBoxes = this.$.box.querySelectorAll('.color');
+					for (var i = 0; i < colorBoxes.length; i++) {
+						colorBoxes[i].style.backgroundColor = colorBoxes[i].innerHTML;
+					}
+					
 					var sizeOfAColor = getComputedStyle(this.$.box.querySelector('.color')).width.replace('px', '');
 					var rowCount = colorBoxes.length / this.columnCount;
 					this.$.box.style.height = rowCount * sizeOfAColor + 'px';
