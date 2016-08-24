@@ -15,6 +15,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 	<link rel="import" href="../cbn-color-picker.html">
 
+	<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+	<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+
 	<style>
 		html,body{
 			margin:0;
@@ -30,10 +33,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	</style>
 </head>
 <body>
-
-	<div style="height: 600px;width:600px">
-		<cbn-color-picker></cbn-color-picker>
-	</div>
-
+<div style="margin: 20px auto; width: 500px;">
+	<form id="demoForm" is="cbn-form" model>
+		<demo-snippet class="centered-demo" style="position:relative">
+			<template is="dom-bind">
+				<div style="height: 200px">
+					<cbn-color-picker></cbn-color-picker>
+				</div>
+			</template>
+		</demo-snippet>
+		<br/>
+	</form>
+</div>
 </body>
 </html>
